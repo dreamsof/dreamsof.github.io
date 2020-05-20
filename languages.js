@@ -70,6 +70,7 @@ function getPreferedLlanguage() {
 
 window.addEventListener("load", (event) => {
 	var language = getPreferedLlanguage();
+	console.log('language ' + language);
 	if (language == 'en') {
 		console.log('default english');
 		return;

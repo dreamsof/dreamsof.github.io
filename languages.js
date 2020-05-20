@@ -70,14 +70,17 @@ function getPreferedLlanguage() {
 window.addEventListener("load", (event) => {
 	var language = getPreferedLlanguage();
 	console.log('language ' + language);
-	if (language == 'en') {
-		console.log('default english');
-		return;
-	}
 
-	if (! language in TRANSLATIONS) {
-		console.log('language not supported');
-		return;
+	if (!(language in TRANSLATIONS)) {
+		if (language.length <= 2) {
+			console.log('(1) no translation for: ' + language);
+			return;
+		}
+		language = language.substring(0, 2);
+		if (!(language in TRANSLATIONS)) {
+			console.log('(2) no translation for: ' + language);
+			return;
+		}
 	}
 
 	var translation = TRANSLATIONS[language];

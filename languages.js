@@ -58,14 +58,13 @@ const TRANSLATIONS = {
 };
 
 function getPreferedLlanguage() {
-	// if (!!navigator && !!navigator.languages && navigator.languages.length > 0) {
-	// 	return navigator.languages[0]; 
-	// } else if (!!navigator && !!navigator.language) {
-	// 	return navigator.language;
-	// } else {
-	// 	return 'en';
-	// }
-	return 'es';
+	if (!!navigator && !!navigator.languages && navigator.languages.length > 0) {
+		return navigator.languages[0]; 
+	} else if (!!navigator && !!navigator.language) {
+		return navigator.language;
+	} else {
+		return 'en';
+	}
 }
 
 window.addEventListener("load", (event) => {

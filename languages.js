@@ -33,13 +33,13 @@ const TRANSLATIONS = {
 		/* button 1 */ 'DESCARGÁ LA HERRAMIENTA',
 
 		/* title section 1 (text06) */ 'DEJÁ DE USAR LOS HASHTAGS INCORRECTOS',
-		/* content section 1 (text07) */ 'No importa si eres influencer, fotógrafo o social media manager, al usar hashtags compites con otros posteos que buscan la misma audiencia que tú.<br/> <em>Por ejemplo:</em> al usar <strong>#Travel</strong> estarás enterrando tu publicación junto con millones de otros usuarios. Es por esto que debes seleccionar tus hashtags de forma inteligente para lograr el <strong>mejor cocktail</strong> que potencie tu publicación.',
+		/* content section 1 (text07) */ 'No importa si eres influencer, fotógrafo o social media manager, al usar hashtags <strong>compites</strong> con otros posteos que buscan la misma audiencia que tú.<br/> <em>Por ejemplo:</em> al usar <strong>#Travel</strong> estarás enterrando tu publicación junto con millones de otros usuarios. Es por esto que debes seleccionar tus hashtags de forma inteligente para lograr el <strong>mejor cocktail</strong> que potencie tu publicación.',
 
 		/* title section 2 (text09) */ 'EFECTO CASCADA',
-		/* content section 2 (text10) */ 'Tus posteos merecen ser vistos. PUNTO. Solo introduce un par de hashtags semilla y deja que <strong>nuestro algoritmo</strong> elija por ti <strong>30 hashtags perfectos</strong> para el cocktail. Donde cada uno de los hashtags seleccionados ayudará a generar el efecto cascada basado en la cantidad de posteos que haya en cada hashtag seleccionado.',
+		/* content section 2 (text10) */ 'Tus posteos merecen ser vistos. <strong>PUNTO</strong>. Solo introduce un par de hashtags semilla y deja que <strong>nuestro algoritmo</strong> elija por ti <strong>30 hashtags perfectos</strong> para el cocktail. Donde cada uno de los hashtags seleccionados ayudará a generar el efecto cascada basado en la cantidad de posteos que haya en cada hashtag seleccionado.',
 
 		/* title section 3 (text03) */ 'HACKEA LA ESTRATEGIA DE HASHTAGS',
-		/* content section 3 (text12) */ 'Si seleccionas tus posteos de forma estratégica ¿porqué no haces lo mismo con los hashtags que usas? Tienes que ser metódico y elegir hashtags que permitan que tus publicaciones sean destacadas en la mayoría de hashtags que usas. El cocktail de 30-hashtags brindado por la herramienta <strong>Just Tags</strong> permitirá que <strong>tus posteos sean lideres</strong> en el 60% de los hashtags utilizados. Dándote mayor competitividad para los 40% de hashtags restantes (con más post compitiendo contigo). De esta forma tu posteo puede beneficiarse del efecto cascada.',
+		/* content section 3 (text12) */ 'Si seleccionas tus posteos de forma estratégica ¿porqué no haces lo mismo con los hashtags que usas? Tienes que ser metódico y elegir hashtags que permitan que tus publicaciones sean <strong>destacadas</strong> en la mayoría de hashtags que usas.<br/>El cocktail de 30-hashtags brindado por la herramienta <strong>Just Tags</strong> permitirá que <strong>tus posteos sean lideres</strong> en el 60% de los hashtags utilizados. Dándote mayor competitividad para los 40% de hashtags restantes (con más post compitiendo contigo). De esta forma tu posteo puede beneficiarse del efecto cascada.',
 
 		/* title (text02) */ 'SE INTELIGENTE, HAZTE VIRAL',
 		/* subtitle (text04) */ 'hackea la #estrategia con nuestro algoritmo ahora',
@@ -49,7 +49,7 @@ const TRANSLATIONS = {
 		/* bio2 (text11) */ '<strong>@benja.xp</strong> - blogger/fotógrafo "No puedo creer lo fácil que es conseguir que mis publicaciones sean más vistas con esta herramienta. Todo este tiempo perdido sin siquiera usar hashtags. Ahora en segundos obtengo 30 combinaciones bien pensadas de hashtags listos para expandir mi alcance. "',
 		/* bio3 (text17) */ '<strong>@weremoto</strong> - Comunidad Remota "Si necesitan que su publicación se dispare sobre las impresiones de personas que no lo siguen, entonces deje de buscar, esto es lo que necesitan."',
 
-		/* button 3 */ 'DESCARGA JUST TAGS HOY',
+		/* button 3 */ 'DESCARGÁ JUST TAGS AHORA',
 
 		/* step 1 (text13) */ '<strong>1er paso</strong> - descarga la herramienta',
 		/* step 2 (text14) */ '<strong>2do paso</strong> - inserta los hashtags semilla y copia los 30 hashtags que te entrega la herramienta listos para ser usados en tu post.',
@@ -71,10 +71,18 @@ function setLanguage(language) {
 	if (language.length != 2) {
 		return;
 	}
-	updateLanguageTo(language);
+	if (language == 'en') {
+		// location.reload();
+		window.location.reload(false); 
+	} else {
+		updateLanguageTo(language);
+	}
 }
 
 function updateLanguageTo(language) {
+	if (language == 'en') {
+		return;
+	}
 	var translation = TRANSLATIONS[language];
 	if (translation.length != ELEMENTS.length) {
 		console.log('wrong number of strings / elements');

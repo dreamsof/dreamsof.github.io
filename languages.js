@@ -1,4 +1,6 @@
 
+const IMAGES_SRC_PATH = 'assets/images/';
+
 const ELEMENTS = [
 	'text01',  // intro
 	'button1',
@@ -55,6 +57,18 @@ const TRANSLATIONS = {
 	]
 };
 
+const IMAGES = [
+	'image10-img',  // gif promo
+	'image09-img'  // gif walkthrough
+];
+
+const TRANSLATED_IMAGES = {
+	'es': [
+		'image10-es.gif',  // gif promo
+		'image09-es.gif'  // gif walkthrough
+	]
+};
+
 function getPreferedLanguage() {
 	if (!!navigator && !!navigator.languages && navigator.languages.length > 0) {
 		return navigator.languages[0]; 
@@ -77,10 +91,7 @@ function setLanguage(language) {
 	}
 }
 
-function updateLanguageTo(language) {
-	if (language == 'en') {
-		return;
-	}
+function updateText(language) {
 	var translation = TRANSLATIONS[language];
 	if (translation.length != ELEMENTS.length) {
 		console.log('ERROR: wrong number of strings / elements');
@@ -97,6 +108,36 @@ function updateLanguageTo(language) {
 		let translatedText = translation[i];
 		element.innerHTML = translatedText;
 	}
+}
+
+function updateImages(language) {
+	var translatedImages = TRANSLATED_IMAGES[language];
+	if (!translatedImages) {
+		console.log('ERROR: no translated images for ' + language);
+		return;
+	}
+	if (translatedImages.length != IMAGES.length) {
+		console.log('ERROR: wrong number of images / elements');
+		return;
+	}
+	for (var i = 0; i < IMAGES.length; i++) {
+		let imageElement = document.getElementById(IMAGES[i]);
+
+		if (!imageElement) {
+			console.log("ERROR: couldn't find image " + IMAGES[i]);
+			continue;
+		}
+		imageElement.src = translatedImages[i];
+		imageElement.dataset.src = translatedImages[i];
+	}
+}
+
+function updateLanguageTo(language) {
+	if (language == 'en') {
+		return;
+	}
+	updateText(language);
+	updateImages(language);
 }
 
 window.addEventListener("load", (event) => {

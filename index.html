@@ -319,6 +319,98 @@
                 transition: none !important;
             }
 
+            @-moz-keyframes deferred-spinner {
+                0% {
+                    -moz-transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes deferred-spinner {
+                0% {
+                    -moz-transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-ms-keyframes deferred-spinner {
+                0% {
+                    -moz-transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes deferred-spinner {
+                0% {
+                    -moz-transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    -moz-transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                    transform: rotate(360deg);
+                }
+            }
+
+            .deferred:before {
+                content: '';
+                display: block;
+                width: 4rem;
+                height: 4rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -2rem 0 0 -2rem;
+                -moz-animation: deferred-spinner 1s infinite linear;
+                -webkit-animation: deferred-spinner 1s infinite linear;
+                -ms-animation: deferred-spinner 1s infinite linear;
+                animation: deferred-spinner 1s infinite linear;
+                transition: opacity 0.25s ease;
+                transition-delay: 0.5s;
+                opacity: 0;
+                z-index: -1;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iOTZweCIgaGVpZ2h0PSI5NnB4IiB2aWV3Qm94PSIwIDAgOTYgOTYiIHpvb21BbmRQYW49ImRpc2FibGUiPjxzdHlsZT5jaXJjbGUge2ZpbGw6IHRyYW5zcGFyZW50OyBzdHJva2U6ICNmZmY7IHN0cm9rZS13aWR0aDogMS41cHg7IH08L3N0eWxlPjxkZWZzPjxjbGlwUGF0aCBpZD0iY29ybmVyIj48cG9seWdvbiBwb2ludHM9IjAsMCA0OCwwIDQ4LDQ4IDk2LDQ4IDk2LDk2IDAsOTYiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcgY2xpcC1wYXRoPSJ1cmwoI2Nvcm5lcikiPjxjaXJjbGUgY3g9IjQ4IiBjeT0iNDgiIHI9IjMyIi8+PC9nPjwvc3ZnPg==');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 3rem;
+            }
+
+            .deferred.loading:before {
+                opacity: 0.25;
+                z-index: 0;
+            }
+
             .image {
                 position: relative;
                 overflow: hidden;
@@ -366,6 +458,19 @@
                 width: 15rem;
             }
 
+            #image10 img {
+                width: 22.875rem;
+                height: 19.875rem;
+                -moz-object-fit: cover;
+                -webkit-object-fit: cover;
+                -ms-object-fit: cover;
+                object-fit: cover;
+                -moz-object-position: center;
+                -webkit-object-position: center;
+                -ms-object-position: center;
+                object-position: center;
+            }
+
             #image03 img {
                 width: 15rem;
             }
@@ -405,12 +510,8 @@
                 border-radius: 100%;
             }
 
-            #image08 img {
-                width: 11.875rem;
-            }
-
             #image09 img {
-                width: 11.875rem;
+                width: 26.625rem;
             }
 
             h1 br + br, h2 br + br, h3 br + br, p br + br {
@@ -622,18 +723,6 @@
                 color: #FFFFFF;
                 font-family: 'Source Sans Pro', sans-serif;
                 font-size: 0.75em;
-                line-height: 1.625;
-                font-weight: 200;
-            }
-
-            #text13 br + br {
-                margin-top: 0.975rem;
-            }
-
-            #text13 {
-                color: #FFFFFF;
-                font-family: 'Source Sans Pro', sans-serif;
-                font-size: 1em;
                 line-height: 1.625;
                 font-weight: 200;
             }
@@ -2840,6 +2929,19 @@
                     width: 10rem;
                 }
 
+                #image10 img {
+                    width: 23rem;
+                    height: 24.84375rem !important;
+                    -moz-object-fit: cover;
+                    -webkit-object-fit: cover;
+                    -ms-object-fit: cover;
+                    object-fit: cover;
+                    -moz-object-position: center;
+                    -webkit-object-position: center;
+                    -ms-object-position: center;
+                    object-position: center;
+                }
+
                 #image03 img {
                     width: 10rem;
                 }
@@ -2864,12 +2966,8 @@
                     width: 10rem;
                 }
 
-                #image08 img {
-                    width: 10rem;
-                }
-
                 #image09 img {
-                    width: 10rem;
+                    width: 26.625rem;
                 }
 
                 #text01 {
@@ -2974,13 +3072,6 @@
                     letter-spacing: 0rem;
                     width: 100%;
                     font-size: 0.75em;
-                    line-height: 1.625;
-                }
-
-                #text13 {
-                    letter-spacing: 0rem;
-                    width: 100%;
-                    font-size: 1em;
                     line-height: 1.625;
                 }
 
@@ -4426,6 +4517,10 @@
                     margin-bottom: 0rem;
                 }
 
+                #image10 img {
+                    height: 19.875rem !important;
+                }
+
                 #buttons01 li a {
                     width: 25rem;
                 }
@@ -4567,6 +4662,10 @@
                     margin-left: -50vw;
                 }
 
+                #image10 img {
+                    height: 17.390625rem !important;
+                }
+
                 #text01 {
                     font-size: 1.25em;
                 }
@@ -4625,10 +4724,6 @@
 
                 #text11 {
                     font-size: 0.75em;
-                }
-
-                #text13 {
-                    font-size: 1em;
                 }
 
                 #text14 {
@@ -5360,6 +5455,11 @@
                                     <a href="https://chrome.google.com/webstore/detail/just-tags/ppikcdeaenpmnapokoinjedppjilhcnf" class="button n01" id="button1">get the tool now!</a>
                                 </li>
                             </ul>
+                            <div id="image10" class="image" data-position="center">
+                                <span class="deferred">
+                                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA2MDAgNTI3IiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjUyNyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/image10.gif?v84714130020951" alt=""/>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div id="container03" data-scroll-id="details" data-scroll-behavior="center" data-scroll-offset="0" class="container columns full screen">
@@ -5489,19 +5589,15 @@
                     <div id="container07" class="container columns">
                         <div class="inner">
                             <div>
-                                <div id="image08" class="image">
-                                    <img src="assets/images/image08.jpg" alt=""/>
-                                </div>
-                                <p id="text13">
-                                    <strong>Step 1</strong>
-                                    - download the tool
-                                </p>
                                 <div id="image09" class="image">
-                                    <img src="assets/images/image09.jpg" alt=""/>
+                                    <span class="deferred">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0ODAgNDIyIiB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQyMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="assets/images/image09.gif" alt=""/>
+                                    </span>
                                 </div>
                                 <p id="text14">
-                                    <strong>Step 2</strong>
-                                    - insert hashtags seeds &amp;copy the delivered hashtags to be used with your post
+                                    <strong>Step 1</strong>
+                                    - insert hashtags seeds &amp;copy the <strong>data-driven</strong>
+                                    hashtag cocktail to be used with your post
                                 </p>
                             </div>
                             <div>
@@ -5518,7 +5614,7 @@
                                 </div>
                                 <p id="text18">
                                     <span>
-                                        <strong>Step 3</strong>
+                                        <strong>Step 2</strong>
                                         - monitor results on instagram insight page. 
                                     </span>
                                     <br/>
@@ -6066,6 +6162,61 @@
                     }
                     )();
                 }
+                (function() {
+                    var items = $$('.deferred'), f;
+                    if (!('forEach'in NodeList.prototype))
+                        NodeList.prototype.forEach = Array.prototype.forEach;
+                    items.forEach(function(p) {
+                        var i = p.firstElementChild;
+                        p.style.backgroundImage = 'url(' + i.src + ')';
+                        p.style.backgroundSize = '100% 100%';
+                        p.style.backgroundPosition = 'top left';
+                        p.style.backgroundRepeat = 'no-repeat';
+                        i.style.opacity = 0;
+                        i.style.transition = 'opacity 0.375s ease-in-out';
+                        i.addEventListener('load', function(event) {
+                            if (i.dataset.src !== 'done')
+                                return;
+                            if (Date.now() - i._startLoad < 375) {
+                                p.classList.remove('loading');
+                                p.style.backgroundImage = 'none';
+                                i.style.transition = '';
+                                i.style.opacity = 1;
+                            } else {
+                                p.classList.remove('loading');
+                                i.style.opacity = 1;
+                                setTimeout(function() {
+                                    p.style.backgroundImage = 'none';
+                                }, 375);
+                            }
+                        });
+                    });
+                    f = function() {
+                        var height = document.documentElement.clientHeight
+                          , top = (client.os == 'ios' ? document.body.scrollTop : document.documentElement.scrollTop)
+                          , bottom = top + height;
+                        items.forEach(function(p) {
+                            var i = p.firstElementChild;
+                            if (i.offsetParent === null)
+                                return true;
+                            if (i.dataset.src === 'done')
+                                return true;
+                            var x = i.getBoundingClientRect(), imageTop = top + Math.floor(x.top) - height, imageBottom = top + Math.ceil(x.bottom) + height, src;
+                            if (imageTop <= bottom && imageBottom >= top) {
+                                src = i.dataset.src;
+                                i.dataset.src = 'done';
+                                p.classList.add('loading');
+                                i._startLoad = Date.now();
+                                i.src = src;
+                            }
+                        });
+                    }
+                    ;
+                    on('load', f);
+                    on('resize', f);
+                    on('scroll', f);
+                }
+                )();
                 function lightboxGallery() {
                     var _this = this;
                     this.id = 'gallery';

@@ -127,8 +127,8 @@ function updateImages(language) {
 			console.log("ERROR: couldn't find image " + IMAGES[i]);
 			continue;
 		}
-		imageElement.src = translatedImages[i];
-		imageElement.dataset.src = translatedImages[i];
+		imageElement.src = IMAGES_SRC_PATH+ translatedImages[i];
+		imageElement.dataset.src = IMAGES_SRC_PATH + translatedImages[i];
 	}
 }
 

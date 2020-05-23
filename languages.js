@@ -22,9 +22,8 @@ const ELEMENTS = [
 
 	'button3',
 
-	'text13',  // step 1
-	'text14',  // step 2
-	'text18'  // step 3
+	'text14',  // step 1
+	'text18'  // step 2
 ];
 
 const TRANSLATIONS = {
@@ -51,9 +50,8 @@ const TRANSLATIONS = {
 
 		/* button 3 */ 'DESCARGÁ JUST TAGS AHORA',
 
-		/* step 1 (text13) */ '<strong>1er paso</strong> - descarga la herramienta',
-		/* step 2 (text14) */ '<strong>2do paso</strong> - inserta los hashtags semilla y copia los 30 hashtags que te entrega la herramienta listos para ser usados en tu post.',
-		/* step 3 (text18) */ '<strong>3er paso</strong> - monitorea los resultados en la página de insights de instagram.<br/><em>*captura de pantalla de un posteo de nuestros usuarios usando los hashtags generados con Just Tags</em>'
+		/* step 1 (text14) */ '<strong>1do paso</strong> - inserta los hashtags <em>semilla</em> y copia los 30 hashtags que te entrega la herramienta listos para ser usados en tu post.',
+		/* step 2 (text18) */ '<strong>2er paso</strong> - monitorea los resultados en la página de insights de instagram.<br/><em>*captura de pantalla de un posteo de nuestros usuarios usando los hashtags generados con Just Tags</em>'
 	]
 };
 
@@ -85,11 +83,17 @@ function updateLanguageTo(language) {
 	}
 	var translation = TRANSLATIONS[language];
 	if (translation.length != ELEMENTS.length) {
-		console.log('wrong number of strings / elements');
+		console.log('ERROR: wrong number of strings / elements');
 		return;
 	}
 	for (var i = 0; i < translation.length; i++) {
 		let element = document.getElementById(ELEMENTS[i]);
+
+		if (!element) {
+			console.log("ERROR: couldn't find " + ELEMENTS[i]);
+			continue;
+		}
+
 		let translatedText = translation[i];
 		element.innerHTML = translatedText;
 	}

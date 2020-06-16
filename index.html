@@ -5452,7 +5452,7 @@
                             <p id="text01">our tool makes your instagram post discoverable<br/>by selecting the right hashtags to use</p>
                             <ul id="buttons01" class="buttons">
                                 <li>
-                                    <a onClick="ga('send', 'event', { eventCategory: 'button', eventAction: 'click', eventLabel: 'button1'});" href="./checkout.html" class="button n01" id="button1">get the tool now!</a>
+                                    <a onClick="if ('ga' in window) {tracker = ga.getAll()[0];if (tracker) {tracker.send('event', { eventCategory: 'button', eventAction: 'click', eventLabel: 'button1'});console.log('sent');} else {console.log('no tracker');}} else {console.log('no ga');}" href="./checkout.html" class="button n01" id="button1">get the tool now!</a>
                                 </li>
                             </ul>
                             <div id="image10" class="image" data-position="center">
@@ -5525,7 +5525,7 @@
                             <p id="text04">hack the # strategy with our algorithm</p>
                             <ul id="buttons03" class="buttons">
                                 <li>
-                                    <a href="./checkout.html" class="button n01" id="button2">Get The Tool Now</a>
+                                    <a onClick="if ('ga' in window) {tracker = ga.getAll()[0];if (tracker) {tracker.send('event', { eventCategory: 'button', eventAction: 'click', eventLabel: 'button2'});console.log('sent');} else {console.log('no tracker');}} else {console.log('no ga');}" href="./checkout.html" class="button n01" id="button2">Get The Tool Now</a>
                                 </li>
                             </ul>
                         </div>
@@ -5581,7 +5581,7 @@
                         <div class="inner">
                             <ul id="buttons02" class="buttons">
                                 <li>
-                                    <a href="./checkout.html" class="button n01" id="button3">Get The Tool Now</a>
+                                    <a onClick="if ('ga' in window) {tracker = ga.getAll()[0];if (tracker) {tracker.send('event', { eventCategory: 'button', eventAction: 'click', eventLabel: 'button3'});console.log('sent');} else {console.log('no tracker');}} else {console.log('no ga');}" href="./checkout.html" class="button n01" id="button3">Get The Tool Now</a>
                                 </li>
                             </ul>
                         </div>

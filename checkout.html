@@ -11,16 +11,31 @@
           gtag('js', new Date());
 
           gtag('config', 'UA-166006086-1');
+          gtag('config', 'AW-621491423');
         </script>
         <script src="checkout-translation.js"></script>
 
         <script>
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-621491423/R5DvCMf_2NQBEN_prKgC',
+                  'transaction_id': '',
+                  'event_callback': callback
+              });
+              return false;
+            }
+
             function recordPayPalConversion() {
                 if ('ga' in window) {
                     tracker = ga.getAll()[0];
                     if (tracker) {
                         tracker.send('event', {
-                            eventCategory: 'button', eventAction: 'click', eventLabel: 'button1'
+                            eventCategory: 'button', eventAction: 'click', eventLabel: 'paypal'
                         });
                         console.log('sent');
                     } else {
@@ -29,6 +44,8 @@
                 } else {
                     console.log('no ga');
                 }
+                gtag_report_conversion();
+                return true;
             }
         </script>
         

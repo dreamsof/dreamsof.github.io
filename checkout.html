@@ -13,6 +13,24 @@
           gtag('config', 'UA-166006086-1');
         </script>
         <script src="checkout-translation.js"></script>
+
+        <script>
+            function recordPayPalConversion() {
+                if ('ga' in window) {
+                    tracker = ga.getAll()[0];
+                    if (tracker) {
+                        tracker.send('event', {
+                            eventCategory: 'button', eventAction: 'click', eventLabel: 'button1'
+                        });
+                        console.log('sent');
+                    } else {
+                        console.log('no tracker');
+                    }
+                } else {
+                    console.log('no ga');
+                }
+            }
+        </script>
         
         <title>Just Tags - Checkout</title>
         <meta charset="utf-8"/>
@@ -2065,7 +2083,7 @@
                                 </p>
                                 <ul id="buttons01" class="buttons">
                                     <li>
-                                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                        <form onsubmit="recordPayPalConversion()" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                             <input type="hidden" name="cmd" value="_s-xclick">
                                             <input type="hidden" name="hosted_button_id" value="XZEEYVP8M6REQ">
                                             <input type="image" style="width:330px;" src="./paypal.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">

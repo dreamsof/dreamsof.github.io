@@ -515,6 +515,29 @@
                 text-decoration: underline;
             }
 
+            #text15 br + br {
+                margin-top: 0.975rem;
+            }
+
+            #text15 {
+                text-align: justify;
+                color: #FFFFFF;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 1.125em;
+                line-height: 1.625;
+                font-weight: 400;
+            }
+
+            #text15 a:hover {
+                color: #78FFDF;
+            }
+
+            #text15 a {
+                text-decoration: underline;
+            }
+
+
+
             #text05 br + br {
                 margin-top: 0.975rem;
             }
@@ -1312,6 +1335,13 @@
                     line-height: 1.625;
                 }
 
+                #text15 {
+                    letter-spacing: 0rem;
+                    width: 100%;
+                    font-size: 1.125em;
+                    line-height: 1.625;
+                }
+
                 #text05 {
                     letter-spacing: 0rem;
                     width: 100%;
@@ -1831,6 +1861,10 @@
                     font-size: 1.125em;
                 }
 
+                #text15 {
+                    font-size: 1.125em;
+                }
+
                 #text05 {
                     font-size: 0.875em;
                 }
@@ -2093,7 +2127,7 @@
                         <div class="inner">
                             <h2 id="text13">
                                 <span>
-                                    Pre-launch price is <s>$30</s>
+                                    Pre-launch price: <s>$30</s>
                                     <strong>$15</strong>
                                 </span>
                                 <br/>
@@ -2106,20 +2140,9 @@
                     <div id="container01" class="container columns">
                         <div class="inner">
                             <div>
-                                <p id="text14">
-                                    <span>Payment options: Paypal</span>
-                                    <br/>
-                                    <br/>
-                                    <span>Once transaction is made, Paypal will re-direct you to the download page where you can immediately install and start using the tool. </span>
-                                    <br/>
-                                    <span>Only available for Chrome browsers. Further compatible versios will be released in the next weeks.</span>
-                                    <br/>
-                                    <span>
-                                        For questions please <a href="mailto:justtagsco@gmail.com">email</a>
-                                        us.
-                                    </span>
-                                </p>
-                                <ul id="buttons01" class="buttons">
+                                <p id="text15" style="margin-bottom: 0;">
+                                    <span>Select payment method:</span>
+                                <ul id="buttons01" class="buttons" style="margin-top: 0;">
                                     <li>
                                         <form onsubmit="recordPayPalConversion()" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                             <input type="hidden" name="cmd" value="_s-xclick">
@@ -2129,6 +2152,16 @@
                                         </form>
                                     </li>
                                 </ul>
+                                <p id="text14">
+                                    <span>Once transaction is made, Paypal will re-direct you to the download page where you can immediately install and start using the tool. </span>
+                                    <br/>
+                                    <span>Only available for Chrome browsers. Further compatible versios will be released in the next weeks.</span>
+                                    <br/>
+                                    <span>
+                                        For questions please <a href="mailto:justtagsco@gmail.com">email</a>
+                                        us.
+                                    </span>
+                                </p>
                             </div>
                             <div>
                                 <div id="image01" class="image">
@@ -2136,7 +2169,7 @@
                                         <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA0ODAgNDIyIiB3aWR0aD0iNDgwIiBoZWlnaHQ9IjQyMiIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI%2BPHJlY3QgZmlsbD0idHJhbnNwYXJlbnQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiLz48L3N2Zz4%3D" data-src="checkout/assets/image01.gif" alt=""/>
                                     </span>
                                 </div>
-                                <p id="text11">Screen recording of the actual tool you will get. Just providing a few hashtags seeds, you will get 30 hashtags that will contain a combination of small, medium, big and huge hashtags (classification is made based on the amount of post each hashtag has at the moment of the request/query). This will help your post top-perform and get better engagement rates.</p>
+                                <p id="text11">Screen recording of the actual tool you will get. Just providing a few hashtag seeds, you will get 30 hashtags that will contain a combination of small, medium, big and huge hashtags (classification is made based on the amount of post each hashtag has at the moment of the request/query). This will help your post top-perform and get better engagement rates.</p>
                             </div>
                         </div>
                     </div>

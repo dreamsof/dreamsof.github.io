@@ -7,7 +7,8 @@ const ELEMENTS = [
 
 const TRANSLATIONS = {
 	'es': [
-		/* text13= */ '<span>Precio pre-lanzamiento: <s>$30 USD</s>&nbsp;<strong>$15 USD</strong></span><br><span><em>Pago por unica vez</em></span>',
+		/* text13= */ '<span style="text-align: left !important;"> <strong>Precio pre-lanzamiento:</strong> <span>$15</span> <span style=" font-size: 60%; vertical-align: baseline; left: -0.2em; top: -0.3em; position: relative;">.00</span> <span style="font-size: 70%;">(USD)</span> </span> <br/> <em style="font-size: 0.8em;">(pago por unica vez, precio post-lanzamiento $30)</em> <br/>',
+
 		/* text14= */ '<span>Una vez realizada la compra, Paypal va a enviarte directamente a la pagina para instalar nuestra aplicacion. </span><br><span>Por ahora solo disponible en Google Chrome. Otras plataformas seran agregadas en las proximas semanas.</span><br><span>Por preguntas, contactarnos a nuestro <a href="mailto:justtagsco@gmail.com">email</a>.</span>',
 		/* text11= */ 'Captura de pantalla de la app. Con apenas unas pocas semillas, la app te dara un mix de 30 hashtags que contiene la mezcla exacta de hashtags de categorias chiquitos, medianos, grandes y enormes. Usar el mix te dara maximo performance en tus posts!',
 		/* text15= */ 'Seleccione metodo de pago:'

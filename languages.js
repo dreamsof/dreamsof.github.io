@@ -31,7 +31,7 @@ const ELEMENTS = [
 const TRANSLATIONS = {
 	'es': [
 		/* intro (text01) */ 'haz visibles tus posteos de instagram usando los hashtags elegidos por nuestro algoritmo',
-		/* button 1 */ 'DESCARGÁ LA HERRAMIENTA',
+		/* button 1 */ 'Oferta Lanzamiento $15',
 
 		/* title section 1 (text06) */ 'DEJÁ DE USAR LOS HASHTAGS INCORRECTOS',
 		/* content section 1 (text07) */ 'No importa si eres influencer, fotógrafo o social media manager, al usar hashtags <strong>compites</strong> con otros posteos que buscan la misma audiencia que tú.<br/> <em>Por ejemplo:</em> al usar <strong>#Travel</strong> estarás enterrando tu publicación junto con millones de otros usuarios. Es por esto que debes seleccionar tus hashtags de forma inteligente para lograr el <strong>mejor cocktail</strong> que potencie tu publicación.',
@@ -44,13 +44,13 @@ const TRANSLATIONS = {
 
 		/* title (text02) */ 'SE INTELIGENTE, HAZTE VIRAL',
 		/* subtitle (text04) */ 'hackea la #estrategia con nuestro algoritmo ahora',
-		/* button 2 */ 'EMPEZÁ AHORA',
+		/* button 2 */ 'EMPEZÁ AHORA por $15',
 
 		/* bio1 (text16) */ '<strong>@josefina.mariap</strong> - diseñadora gráfica "2 días después de publicar mi primera foto con los hashtags que obtuve de la herramienta Just Tags, ¡el 59% de las personas que vieron la publicación no me seguían! Esto es impresionante."',
 		/* bio2 (text11) */ '<strong>@benja.xp</strong> - blogger/fotógrafo "No puedo creer lo fácil que es conseguir que mis publicaciones sean más vistas con esta herramienta. Todo este tiempo perdido sin siquiera usar hashtags. Ahora en segundos obtengo 30 combinaciones bien pensadas de hashtags listos para expandir mi alcance. "',
 		/* bio3 (text17) */ '<strong>@weremoto</strong> - Comunidad Remota "Si necesitan que su publicación se dispare sobre las impresiones de personas que no lo siguen, entonces deje de buscar, esto es lo que necesitan."',
 
-		/* button 3 */ 'DESCARGÁ JUST TAGS AHORA',
+		/* button 3 */ 'JUST TAGS solo $15',
 
 		/* step 1 (text14) */ '<strong>1do paso</strong> - inserta los hashtags <em>semilla</em> y copia los 30 hashtags que te entrega la herramienta listos para ser usados en tu post.',
 		/* step 2 (text18) */ '<strong>2er paso</strong> - monitorea los resultados en la página de insights de instagram.<br/><em>*captura de pantalla de un posteo de nuestros usuarios usando los hashtags generados con Just Tags</em>'

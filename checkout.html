@@ -41,20 +41,31 @@
             }
 
             function recordPayPalConversion() {
+                try {
+                    gtag_report_conversion();
+                }
+                catch(err) {
+                    console.log('gtag error');
+                }
+                try {
+                    fbq('trackCustom', 'PayPal');
+                }
+                catch(err) {
+                    console.log('fb error');
+                }
                 if ('ga' in window) {
                     tracker = ga.getAll()[0];
                     if (tracker) {
                         tracker.send('event', {
                             eventCategory: 'button', eventAction: 'click', eventLabel: 'paypal'
                         });
-                        console.log('sent');
+                        console.log('ga: sent');
                     } else {
-                        console.log('no tracker');
+                        console.log('ga: no tracker');
                     }
                 } else {
-                    console.log('no ga');
+                    console.log('ga: not present');
                 }
-                gtag_report_conversion();
                 return true;
             }
         </script>
